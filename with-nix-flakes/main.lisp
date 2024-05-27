@@ -1,9 +1,16 @@
 (defpackage :lisp-webserver
   (:nicknames :lisp-webserver/main)
-  (:use :cl)
+  (:use :cl
+        :clack
+        ;:hunchentoot
+        )
   (:export :main))
 
 (in-package #:lisp-webserver/main)
 
 (defun main (&rest args)
-  (format T "Hello, world..."))
+  (clack:clackup
+    (lambda (env)
+      (declare (ignore env))
+      '(200 (:content-type "text/plain") ("Hello, World!")))
+    :port 8080))

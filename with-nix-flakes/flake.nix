@@ -19,6 +19,7 @@
         src = pkgs.lib.cleanSource ./.;
         lispDependencies = with pkgs.lispPackagesLite; [
           clack
+          hunchentoot
         ];
         meta = with lib; {
           license = licenses.mit;

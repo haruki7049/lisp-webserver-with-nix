@@ -6,4 +6,5 @@
   :build-operation "program-op"
   :build-pathname "bin/lisp-webserver"
   :entry-point "lisp-webserver:main"
-  :components ((:file "main")))
+  :components ((:file "main"))
+  :depends-on ("clack" "hunchentoot"))
