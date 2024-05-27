@@ -1,9 +1,7 @@
 (defpackage :lisp-webserver
   (:nicknames :lisp-webserver/main)
   (:use :cl
-        :clack
-        ;:hunchentoot
-        )
+        :clack)
   (:export :main))
 
 (in-package #:lisp-webserver/main)
