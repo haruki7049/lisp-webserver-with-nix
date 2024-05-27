@@ -3,7 +3,7 @@
   (:use :cl)
   (:export :main))
 
-(in-package #lisp-webserver/main)
+(in-package #:lisp-webserver/main)
 
 (defun main (&rest args)
   (format T "Hello, world..."))

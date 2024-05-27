@@ -18,8 +18,7 @@
         lispSystem = "lisp-webserver";
         src = pkgs.lib.cleanSource ./.;
         lispDependencies = with pkgs.lispPackagesLite; [
-          alexandria
-          arrow-macros
+          clack
         ];
         meta = with lib; {
           license = licenses.mit;
